@@ -13,7 +13,7 @@ invalid_user_id = 'Pandarakutty'
 
 class Test_Main(unittest.TestCase):
     def test_get_repos_valid(self):
-        self.assertEqual(get_repos(user_id), ['ssw555b_team7', 'SSW567-HW00', 'Triangle567'])
+        self.assertEqual(get_repos(user_id), ['HW04', 'ssw555b_team7', 'SSW567-HW00', 'Triangle567'])
 
     def test_get_repos_invalid(self):
         self.assertEqual(get_repos(invalid_user_id), 'repo url error')
