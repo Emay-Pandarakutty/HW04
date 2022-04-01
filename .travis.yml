@@ -2,9 +2,16 @@
 language: python
 python:
  - "3.7"
+ - "3.8"
 install:
   - pip install requests
+  - pip install coverage
+  - pip install coveralls
 # command to run tests
 script:
- - python -m unittest Test
+  - cd back-end
+  - python -m coverage run -m unittest Test
 
+aftersuccess:
+  coveralls
+ 
